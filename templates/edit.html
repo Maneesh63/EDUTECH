@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Course</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='edit.css')}}">
+</head>
+<body>
+    <h1>EDIT COURSE</h1>
+
+    <form  action="{{url_for('edit',course_id=edit_course.course_id)}}" method="post">
+        <label for="title">TITLE:</label><br><br>
+    <input type="text" name="title" id="title" value="{{edit_course.title}}"><br><br>
+    
+    <label for="description">DESCRIPTION:</label><br><br>
+    <textarea id="description" name="description" rows="8" cols="60">{{edit_course.description | safe}}</textarea><br><br>
+
+    <input type="submit" value="SAVE COURSE"  onclick="update()">
+        
+    </form>
+
+    <script>
+        function update()
+        {
+         let title=document.getElementById('title').value;
+         let description=document.getElementById('description').value;
+
+          if (title && description){
+            alert('Your update Was Saved');
+                }
+        }
+    </script>
+</body>
+</html>

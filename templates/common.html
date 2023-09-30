@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>MARGDARSHAN
+
+        {% block title %} {% endblock %}
+
+    </title>
+
+<link rel="stylesheet" href="{{url_for('static',filename='common.css')}}">
+
+{% block styles %}{% endblock %}
+
+</head>
+<body>
+
+    {% block header  %}{% endblock %}
+
+    {% block content %}{% endblock %}
+    <div class="new">
+
+        <li class="log">Marg<span>Darshan</span></li>
+        <header>
+    <nav>
+        <ul>
+   <li class="home"><a href="{{url_for('home')}}">Home</a></li>
+  <li class="create"><a href="{{url_for('create')}}">CREATE NEW COURSE</a></li>
+  <li class="list"><a href="{{url_for('list_course')}}">COURSES</a></li>
+        </ul>
+    </nav>
+        </header>
+</div>
+{% block script %}{% endblock %}
+ 
+</body>
+</html>

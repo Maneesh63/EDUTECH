@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desired Course</title>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='ind.css')}}">
+    
+</head>
+<body>
+   <h1>Course</h1>
+
+   <div class="container">
+   <h2>{{ind.title}}</h2>
+   <h3>{{ind.description}}</h3>
+   <h4>{{ind.date}}</h4> 
+   
+   <div class="link">
+
+    <li><a href="{{url_for('edit',course_id=ind.course_id)}}">Edit course</a></li>
+ 
+    <li><a href="{{url_for('delete_course',course_id=ind.course_id)}}">Delete course</a></li>
+   
+   </div>
+</div>
+</body>
+</html>

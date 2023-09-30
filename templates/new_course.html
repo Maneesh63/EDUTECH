@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CREATE NEW COURSE</title>
+  
+  <link rel="stylesheet" href="{{url_for('static',filename='new.css')}}">
+</head>
+ <body>
+    <h1>Create Your Own Course</h1>
+
+    <form  action="{{url_for('create')}}" method="post">
+        <label for="title">TITLE:</label><br><br>
+    <input type="text" name="title" id="title" required><br><br>
+    
+    <label for="description">DESCRIPTION:</label><br><br>
+    <textarea id="description" name="description" rows="8" cols="60" required></textarea><br><br>
+
+    <input type="submit" onclick="perform()" value="ADD NEW COURSE">
+        
+    </form>
+   
+   
+    
+   <script>
+        function perform()
+        {
+        let title= document.getElementById('title').value;
+        let description=document.getElementById('description').value;
+
+          if(title && description){
+             alert('Course Created susccessfully!')
+            }
+    }
+     
+    
+
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,21 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    margin:50px 0 0 400px;
+}
+form{
+    margin:100px 0 0 400px;
+}
+input[type='submit']{
+    
+    width: 470px;
+    background-color: black;
+    color: aliceblue;
+    padding:7px;
+    font-weight: bold;
+}
+input[type='text']{
+    width:400px;
+    padding:5px;
+}

@@ -1,0 +1,26 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    padding: 20px;
+    border: 1px solid black;
+    margin:20px 100px 50px 50px;
+    box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.2)
+}
+.link {
+    list-style: none;
+    display: flex;
+    margin-right:10px;
+    
+}
+.link a{
+    color: rgb(218, 16, 46);
+    text-decoration: none;
+    font-weight: bold;
+    margin-right:30px;
+}
+h1{
+    margin:0 0 0 100px;
+}

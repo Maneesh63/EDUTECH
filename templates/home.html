@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARGDARSHAN</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+</head>
+<body>
+    <div class="new">
+
+        <li class="log">Marg<span>Darshan</span></li>
+        <header>
+    <nav>
+        <ul>
+   <li class="home"><a href="{{url_for('home')}}">Home</a></li>
+  <li class="create"><a href="{{url_for('create')}}">CREATE NEW COURSE</a></li>
+  <li class="list"><a href="{{url_for('list_course')}}">COURSES</a></li>
+        </ul>
+    </nav>
+        </header>
+</div>
+
+
+<div class="all">
+    {% for l in list %}
+ <div class="list2">
+    <h2>TITLE:{{l.title}}</h2>
+    <h3>DESCRIPTION:{{l.description}}</h3>
+    <h4>DATE:{{l.date}} </h4>
+
+    <div class="link">
+        <li><a href="{{url_for('edit',course_id=l.course_id)}}">Edit course</a></li>
+     
+        <li><a href="{{url_for('delete_course',course_id=l.course_id)}}">Delete course</a></li>
+       
+        <li><a href="{{url_for('individual',course_id=l.course_id)}}">View course</a></li>    
+       </div>
+   </div>
+</div>
+{% endfor %}
+</body>
+</html>

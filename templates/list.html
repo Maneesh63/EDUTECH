@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>List of Courses</title>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='list.css')}}">
+</head>
+<body>
+    <h1>LIST OF COURSES</h1>
+ 
+    {% for li in list  %}
+<div class="container">
+    
+    <h2>{{li.title}}</h2>
+    <h3>{{li.description}}</h3>
+    <h4>{{li.date}}</h4> 
+
+     <div class="link">
+     <li><a href="{{url_for('edit',course_id=li.course_id)}}">Edit course</a></li>
+  
+     <li><a href="{{url_for('delete_course',course_id=li.course_id)}}">Delete course</a></li>
+    
+     <li><a href="{{url_for('individual',course_id=li.course_id)}}">View course</a></li>    
+    </div>
+</div>
+     {% endfor %}
+
+</body>
+</html>
